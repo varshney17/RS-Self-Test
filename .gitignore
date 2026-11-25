@@ -1,0 +1,21 @@
+# Patient data and source documents
+*.pdf
+*.xlsx
+*.xls
+growth_ortho_ocr_output.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Local outputs
+outputs/
+temp/
+logs/

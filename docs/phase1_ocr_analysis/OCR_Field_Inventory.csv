@@ -1,0 +1,54 @@
+Field Category,Original Label,Normalized Name,Source Location,Quality Status,Normalization Required,Coding Relevance,Observation,Redacted Evidence,Value Complete
+Administrative,select Fax server,fax_server_header,Page 1; Page 2; Page 3,PRESENT_BUT_INCONSISTENT,No,Low,Fax-server timestamp and page counter repeated with clinical text.,select Fax server [REDACTED DATE/TIME] 1:32:45 PM PAGE 2/011 Fax server | select Fax server [REDACTED DATE/TIME] 1:32:45 PM PAGE 3/011 Fax server | select Fax server [REDACTED DATE/TIME] 1:32:45 PM PAGE 4/011 Fax server,Yes
+Patient Demographics,Patient:,patient_name,Page 1; Page 2; Page 3,DUPLICATED,Yes,No,Repeated on each of the first three pages.,KORT- BRYAN STATION PT Patient: [REDACTED PATIENT NAME] | Patient: [REDACTED PATIENT NAME] | Patient: [REDACTED PATIENT NAME],Yes
+Patient Identifiers,Acct #:,account_number,Page 1; Page 2; Page 3,PRESENT_AND_CLEAR,Yes,Yes,Present on pages 1-3.,"s LSE, 1650 Bryan Station Road Acct #:  [REDACTED ACCOUNT] Visit Date: [REDACTED DATE] | Acct #:  [REDACTED ACCOUNT] Visit Date: [REDACTED DATE] | Acct #: [REDACTED ACCOUNT] Visit Date: [REDACTED DATE]",Yes
+Encounter,Visit Date:,visit_date,Page 1; Page 2; Page 3,PRESENT_BUT_INCONSISTENT,Yes,Yes,"Repeated, but page 2 contains 'Dos:' instead of a visit-date label.","s LSE, 1650 Bryan Station Road Acct #:  [REDACTED ACCOUNT] Visit Date: [REDACTED DATE] | Acct #:  [REDACTED ACCOUNT] Visit Date: [REDACTED DATE] | Acct #: [REDACTED ACCOUNT] Visit Date: [REDACTED DATE]",Yes
+Patient Demographics,DOB:,date_of_birth,Page 1; Page 3; Page 3,DUPLICATED,Yes,Yes,Repeated on pages 1-3.,= “& Ste 122 DOB: [REDACTED DATE] FSC: Medicare | DOB: [REDACTED DATE] | Patient: [REDACTED PATIENT NAME] DOB: [REDACTED DATE],Yes
+Payer,FSC:,coverage_class,Page 1,PRESENT_AND_CLEAR,No,Yes,FSC label appears once and Medicare is clear.,= “& Ste 122 DOB: [REDACTED DATE] FSC: Medicare,Yes
+Payer,Payor:,payor,Page 1,PRESENT_AND_CLEAR,Yes,Yes,MEDICARE is present.,"Lexington, KY, USA, 40505 Clinician: Christopher M. Kaczmarek, PT Payor: MEDICARE",Yes
+Provider,Clinician:,clinician,Page 1,PRESENT_AND_CLEAR,Yes,Yes,PT clinician name and credentials.,"Lexington, KY, USA, 40505 Clinician: Christopher M. Kaczmarek, PT Payor: MEDICARE",Yes
+Provider,Prim Phy:,primary_physician,Page 1,PRESENT_AND_CLEAR,No,Yes,Name is present.,Phone: (859) 293-6133 Prim Phy: Graysen R. Petersen-Fitts MD,Yes
+Administrative,Insured:,insured_status,Page 1,PRESENT_AND_CLEAR,No,No,Value: Not Specified.,Fax: (859) 293-6730 Phy Phone: (859) 263-5140 Insured: Not Specified,Yes
+Administrative,Employer:,employer_status,Page 1,PRESENT_AND_CLEAR,No,No,Value: Retired.,TheestIn Kebab. Best In Rehab. Phy Fax: (859) 263-5141 Employer: Retired,Yes
+Encounter,Inj. Date:,injury_date,Page 1,PRESENT_AND_CLEAR,Yes,Yes,Date is present.,Inj. Date: [REDACTED DATE/TIME] Visits: 10,Yes
+Encounter,Visits:,visit_count,Page 1,PRESENT_AND_CLEAR,Yes,No,Numeric value 10.,Inj. Date: [REDACTED DATE/TIME] Visits: 10,Yes
+Administrative,Surg. Date:,surgical_date,Page 1,PRESENT_AND_CLEAR,No,Yes,Value: Not Specified.,Surg. Date: Not Specified CxyNs: 1,Yes
+Clinical,CxyNs:,ambiguous_cxy_count,Page 1,AMBIGUOUS,Yes,No,"OCR is likely a section or count, but its intended label is uncertain.",Surg. Date: Not Specified CxyNs: 1,Yes
+Clinical,Plan of Care,plan_of_care,Page 1; Page 1; Page 2,PRESENT_AND_CLEAR,No,Yes,Section begins on page 1.,"Plan of Care | The patient was educated regarding their diagnosis, prognosis, related pathology & plan of care. The patient demonstrates a good | visits a week with an expected duration of 4 weeks . The outlined therapeutic procedures and services in the plan of care will address",Yes
+Assessment,Diagnoses,diagnosis_section,Page 1,PRESENT_AND_CLEAR,No,Yes,Diagnosis section includes spine and urinary diagnoses.,Diagnoses,Yes
+Diagnosis,M54.50,icd_label_m54_50,Not observed,MISSING,Yes,Yes,OCR shows 'Spine MS4.50' instead of a clear code.,,No
+Diagnosis,R39.15,icd_label_r39_15,Page 1,PRESENT_AND_CLEAR,Yes,Yes,Urgency diagnosis is present.,"Spine MS4.50 Low back pain, unspecified Bilateral R39.15 Urgency of urination",Yes
+Diagnosis,R35.0,icd_label_r35_0,Page 1,PRESENT_AND_CLEAR,Yes,Yes,Frequency diagnosis is present.,R35.0 Frequency of micturition,Yes
+Chief Complaint,Subjective,subjective,Page 1,PRESENT_AND_CLEAR,No,Yes,Subjective section is present.,Subjective E: inati,Yes
+Functional Status,ADL/ Functional Status:,functional_status,Page 1,PRESENT_AND_CLEAR,No,Yes,Current limitations are described.,ADL/ Functional Status: Current Status: Basic care: unable to ambulate distance > 5-10 minutes in stores before he has to stop to rest,Yes
+Physical Examination,Range of Motion:,range_of_motion,Page 1,PRESENT_BUT_INCONSISTENT,Yes,Yes,Percentages and goals are split across pages 1-2.,Range of Motion:Spine:Pre-Treatment:Active Lumbosacral (%):,Yes
+Physical Examination,Muscle Testing:,muscle_testing,Page 1; Page 2; Page 2,PRESENT_BUT_INCONSISTENT,Yes,Yes,Includes lower-extremity and pelvic-floor testing.,Muscle Testing:Lower Extremity MMT: Left | Muscle Testing:Pelvic Floor:Brink Scale: | Musculoskeletal Improvements In:Pelvic Floor:Muscle Testing:Pelvic Floor:Brink Scale:,Yes
+Physical Examination,Special Tests:,special_tests,Page 2,PRESENT_AND_CLEAR,Yes,Yes,Anal wink and motor-control findings.,Special Tests: Pelvic Floor: Male: Perineum: Anal Wink: present,Yes
+Assessment,Assessment,assessment,Page 1; Page 2,PRESENT_AND_CLEAR,No,Yes,Education and prognosis narrative is present.,Assessment | * Assessment Reassessment,Yes
+Treatment Plan,Recommendations:,recommendations,Page 1,PRESENT_AND_CLEAR,No,Yes,"Pain, function, strength and premorbid-state goals.",Recommendations: Skilled Intervention: Required To:,Yes
+Chief Complaint,Chief Complaint:,chief_complaint,Page 1; Page 2,PRESENT_BUT_INCONSISTENT,Yes,Yes,Pain severity appears with formatting artifacts.,Chief Complaint:Pain:Severity: | Chief Complaint: Urinary frequency and urgency that has worsened over the last year.,Yes
+Goals,L7G,long_term_goal,Page 1; Page 1; Page 2,AMBIGUOUS,Yes,Yes,OCR likely reads 'LTG' as 'L7G' and also splits goal text.,L7G Achieve by [REDACTED DATE]. | L7G Achieve by [REDACTED DATE]. current GROC +2 | L7G Achieve by [REDACTED DATE].,Yes
+Goals,STG,short_term_goal,Page 2; Page 2,PRESENT_BUT_INCONSISTENT,Yes,Yes,Short-term goal text and dates are present.,STG Achieve by [REDACTED DATE]. | STG Achieve by [REDACTED DATE].,Yes
+Outcome,GROC,groc,Page 1; Page 1; Page 2,PRESENT_BUT_INCONSISTENT,Yes,Yes,Current GROC values +2/+4 are separated by surrounding text.,L7G Achieve by [REDACTED DATE]. current GROC +2 | groc +4 | decrease urinary frequency by decreasing intake of bladder irritants GROC +2,Yes
+Treatment Plan,Therapeutic Contents:,therapeutic_contents,Page 2,PRESENT_AND_CLEAR,No,Yes,Multiple therapy modalities are listed.,Therapeutic Contents:,Yes
+Treatment Plan,"Amount, Frequency and Duration:",treatment_frequency_duration,Page 2,PRESENT_AND_CLEAR,No,Yes,Two visits/week and four-week duration.,"Amount, Frequency and Duration: Frequency and Duration: It is recommended that the patient attend rehabilitative therapy for 2",Yes
+Follow-up,Certification Period:,certification_period,Page 3,PRESENT_AND_CLEAR,Yes,Yes,From and to dates are present.,Certification Period: From: [REDACTED DATE] To: [REDACTED DATE],Yes
+Administrative,Signed on,signature_date,Page 3,PRESENT_AND_CLEAR,Yes,Yes,Signature timestamp is present.,Signed on [REDACTED DATE] 10:35:44,Yes
+Administrative,Document ID:,document_id,Page 1; Page 2,DUPLICATED,Yes,Yes,Repeated on pages 1-3.,Document ID: [REDACTED DOCUMENT ID] Status: Signed off (secure electronic signature) | Document ID: [REDACTED DOCUMENT ID] Status: Signed off (secure electronic signature) Page 2 of 3,Yes
+Administrative,Status: Signed off,signature_status,Page 1; Page 2; Page 3,DUPLICATED,No,Yes,Repeated on pages 1-3.,Document ID: [REDACTED DOCUMENT ID] Status: Signed off (secure electronic signature) | Document ID: [REDACTED DOCUMENT ID] Status: Signed off (secure electronic signature) Page 2 of 3 | Document ID: [REDACTED DOCUMENT ID] Status: Signed off (secure electronic signature) Page 3 of 3,Yes
+Provider,Christopher M. Kaczmarek,provider_signature,Page 1; Page 1; Page 2,DUPLICATED,No,Yes,Repeated signature/credentials on pages 1-3.,"Lexington, KY, USA, 40505 Clinician: Christopher M. Kaczmarek, PT Payor: MEDICARE | Christopher M. Kaczmarek, PT,PT(KY Lic: 003847) | Christopher M. Kaczmarek, PT,PT(KY Lic: 003847)",Yes
+Administrative,Page 1 of 3,source_page_footer,Page 1,PRESENT_BUT_INCONSISTENT,No,No,Also includes scanner/fax page counter text.,Page 1 of 3,Yes
+Correspondence,Correspondence for,correspondence_header,Page 4; Page 4,PRESENT_AND_CLEAR,No,No,Appears only on page 4.,Correspondence for [REDACTED PATIENT NAME] | Correspondence for [REDACTED PATIENT NAME],Yes
+Correspondence,Import date,correspondence_import_date,Page 4,PRESENT_BUT_INCONSISTENT,Yes,No,Mon Oct 17 text plus separate sent/sign-off fields.,Import date,Yes
+Correspondence,Sent,correspondence_sent,Page 2; Page 2; Page 4,PRESENT_AND_CLEAR,No,No,Boolean-like values false/true are present.,present) | Special Tests: Pelvic Floor: Male: Perineum: Anal Wink: present | Sent,Yes
+Correspondence,Sign off,correspondence_signoff,Page 4,PRESENT_AND_CLEAR,No,No,Boolean-like value false is present.,Sign off,Yes
+Clinical,Explicit HPI label,hpi,Not observed in OCR pages 1-4,MISSING,No,Yes,No explicit History of Present Illness or HPI section found.,,No
+Clinical,Review of Systems,review_of_systems,Not observed in OCR pages 1-4,MISSING,No,Yes,No explicit ROS section found.,,No
+Clinical,Current Medications,medications,Not observed in OCR pages 1-4,MISSING,No,Yes,No complete medication list found.,,No
+Clinical,Allergies,allergies,Not observed in OCR pages 1-4,MISSING,No,Yes,No allergy section found.,,No
+Clinical,Past Medical History,medical_history,Not observed in OCR pages 1-4,MISSING,No,Yes,No explicit past-medical-history section found.,,No
+Clinical,Surgical History,surgical_history,Not observed in OCR pages 1-4,PARTIALLY_EXTRACTED,No,Yes,Only 'Surg. Date: Not Specified'; no detailed history.,,No
+Clinical,Imaging,imaging_findings,Not observed in OCR pages 1-4,MISSING,No,Yes,No imaging findings section found.,,No
+Clinical,Procedure CPT/HCPCS,procedure_codes,Not observed in OCR pages 1-4,MISSING,No,Yes,"Therapeutic modalities are present, but no CPT/HCPCS procedure code list was found.",,No
+Encounter,Facility name/address,facility_name_address,Not observed in OCR pages 1-4,PARTIALLY_EXTRACTED,No,No,Fax/phone details and address fragments exist; no unambiguous facility name.,,No
+Follow-up,Explicit follow-up visit date,follow_up_visit_date,Not observed in OCR pages 1-4,MISSING,No,Yes,"Certification and goal dates exist, but no explicit next appointment date.",,No

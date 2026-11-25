@@ -1,0 +1,15 @@
+{
+  "files_inspected": 1,
+  "ocr_samples_analyzed": 1,
+  "pages_analyzed": 4,
+  "unique_observed_fields": 42,
+  "inventory_rows": 53,
+  "quality_status_counts": {
+    "PRESENT_BUT_INCONSISTENT": 9,
+    "DUPLICATED": 5,
+    "PRESENT_AND_CLEAR": 26,
+    "AMBIGUOUS": 2,
+    "MISSING": 9,
+    "PARTIALLY_EXTRACTED": 2
+  }
+}
